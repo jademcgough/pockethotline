@@ -55,4 +55,7 @@ PocketHotline::Application.configure do
 
   # Generate digests for assets URLs
   config.assets.digest = true
+
+  # HSTS
+  config.force_ssl = true
 end
