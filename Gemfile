@@ -37,7 +37,7 @@ group :development, :test do
   gem 'therubyracer'
   gem 'sqlite3'
   gem "rb-readline"
-  gem "pry-debugger"
+  gem "pry-byebug"
   gem "rspec-rails"
   gem "factory_girl_rails"
 end
