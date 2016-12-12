@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 ruby '2.0.0'
-gem 'rails', '3.2.16'
+gem 'rails', '~> 3.2.22'
 gem 'jquery-rails', '~> 1.0.18'
 gem 'pg', '~> 0.11.0'
 gem 'bcrypt-ruby', '~> 3.0.1', :require => 'bcrypt'
@@ -18,26 +18,26 @@ gem 'twitter', '~> 4.6.2'
 gem 'stripe', '~> 1.5.24'
 gem 'unicorn'
 gem 'custom_configuration', '~> 0.0.2'
-gem 'haml'
 
 group :assets do
-  # gem 'less', '~> 2.0.8'
+  gem 'haml'
   gem 'sass-rails', "  ~> 3.2.3"
   gem 'coffee-rails', "~> 3.2.1"
   gem 'uglifier', '~> 1.1.0'
 end
 
-group :development, :test do
-  gem 'wirble'
-  gem 'ffaker', '1.5.0'
-  gem 'timecop'
-
+group :development do
   # Just some stuff added for ease of development; feel free to
   # comment out anything temporarily if it gives you trouble.
   gem 'therubyracer'
   gem 'sqlite3'
   gem "rb-readline"
-  gem "pry-debugger"
+end
+
+group :test do
+  gem 'ffaker', '1.5.0'
+  gem 'timecop'
+  gem "pry-byebug"
   gem "rspec-rails"
   gem "factory_girl_rails"
 end
