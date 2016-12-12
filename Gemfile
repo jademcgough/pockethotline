@@ -28,7 +28,6 @@ group :assets do
 end
 
 group :development, :test do
-  gem 'wirble'
   gem 'ffaker', '1.5.0'
   gem 'timecop'
 
