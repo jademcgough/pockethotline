@@ -20,6 +20,8 @@ class PagesController < ApplicationController
   end
   
   def letsencrypt
-    render text: ENV["LETSENCRYPT_CODE"]
+    if  params[:id] == ENV["LETSENCRYPT_ID"]
+      render text: ENV["LETSENCRYPT_CODE"]
+    end
   end
 end
