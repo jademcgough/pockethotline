@@ -18,4 +18,8 @@ class PagesController < ApplicationController
     @operators = User.active
     @operators_oncall = User.active.select {|o| o.on_call?}
   end
+  
+  def letsencrypt
+    render text: ENV["LETSENCRYPT_CODE"]
+  end
 end

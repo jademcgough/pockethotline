@@ -3,6 +3,7 @@ PocketHotline::Application.routes.draw do
   get "volunteer", :to => "pages#volunteer"
   get 'dashboard' => "pages#dashboard", :as => 'dashboard'
   get 'charge', :to => "how#charge"
+  get '/.well-known/acme-challenge/:id' => 'pages#letsencrypt'
 
   post "twilio/start", :as => :twilio_start
   post "twilio/operator_answer", :as => :twilio_operator_answer
