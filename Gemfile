@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-ruby '2.0.0'
+ruby '2.4.1'
 gem 'rails', '~> 3.2.22'
 gem 'jquery-rails', '~> 1.0.18'
 gem 'pg', '~> 0.11.0'
@@ -37,7 +37,8 @@ end
 group :test do
   gem 'ffaker', '1.5.0'
   gem 'timecop'
-  gem "pry-byebug"
-  gem "rspec-rails"
-  gem "factory_girl_rails"
+  gem 'pry-byebug'
+  gem 'rspec-rails', '~> 3.5.2'
+  gem 'factory_girl_rails'
+  gem 'capybara'
 end
